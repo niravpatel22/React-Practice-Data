@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .x 
+        {
+            color:red;
+        }
+        .y 
+        {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="h1">heading</h1>
+    <p id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae magnam consequatur veniam illum, laborum expedita aut vel suscipit porro nihil tempora. Eius ab deserunt nam recusandae cupiditate illum laboriosam incidunt?
+    </p>
+
+    <button onclick="test()">test TOGGLE CLASS</button>
+
+    <button onclick=" addCSS()">Add CSS</button>
+    <button onclick="removeCSS()">Remove CSS</button>
+    <button onclick="addRemoveCSS()">Add/Remove CSS</button>
+
+    <script>
+      p =   document.getElementById('para');
+      h1_tag =   document.getElementById('h1');
+
+      function addCSS()
+      {
+        p.classList.add('x');
+      }
+
+      function removeCSS()
+      {
+        p.classList.remove('x');
+      }
+
+      function addRemoveCSS()
+      {
+        p.classList.toggle('x');
+      }
+
+      function test()
+      {
+        h1_tag.classList.toggle('y');
+      }
+
+
+
+
+    </script>
+    
+</body>
+</html>

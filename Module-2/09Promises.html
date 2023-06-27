@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="demo"></h2>
+
+    <script>
+        // let myPromise = new Promise(function (myResolve, myReject) {
+        //     // "Producing Code" (May take some time)
+
+        //     myResolve(); // when successful
+        //     myReject();  // when error
+        // });
+
+        // // "Consuming Code" (Must wait for a fulfilled Promise)
+        // myPromise.then(
+        //     function (value) { /* code if successful */ },
+        //     function (error) { /* code if some error */ }
+        // );
+
+
+        function myDisplayer(res) {
+            document.getElementById("demo").innerHTML = res;
+        }
+
+        let myPromise = new Promise(function (code, err) {
+            let x = 0;
+
+            // The producing code (this may take some time)
+
+            if (x != 0) {
+                code("OK");
+            } else {
+                err("Error");
+            }
+        });
+
+        myPromise.then(
+            function (code) { myDisplayer(code); },
+            function (err) { myDisplayer(err); }
+        );
+
+
+        
+    </script>
+
+</body>
+
+</html>

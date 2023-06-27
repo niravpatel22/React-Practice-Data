@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=Good work..Keep Practicing, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        div
+        {
+            overflow: hidden;
+        }
+        .xyz 
+        {
+            animation: zoomIn 1s;
+        }
+
+        @keyframes zoomIn 
+        {
+            from{transform: scale(1);}
+            to{transform: scale(1.2);}
+        }
+    </style>
+</head>
+<body>
+
+  <div>
+    <img src="1.jpeg" alt="" height="250px" width="100%" class="x">
+
+    <img src="2.jpg" alt="" height="250px" width="100%" class="x">
+
+    <img src="3.jpg" alt="" height="250px" width="100%" class="x">
+
+    <img src="4.jpg" alt="" height="250px" width="100%" class="x">
+  </div>
+
+    <script>
+
+index =0;
+
+      function slider()
+      {
+        
+        // images = document.getElementsByClassName('x');
+
+        images = document.getElementsByTagName('img');
+
+        //console.log(images);
+         //images[1].style.display = "none";
+
+         for(i=0;i<images.length;i++)
+         {
+            images[i].style.display = "none";
+         }
+
+
+         images[index].style.display = "block";
+         images[index].classList.add('xyz');
+
+        // images[index].className = "xyz";
+         index++;//0++
+
+         if(index==images.length)
+         {
+            index=0;
+         }
+
+         setTimeout("slider()",1000)
+      }
+      slider()
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // function User()
+        // {
+        //     name = "Nirav";
+        //     console.log(name)
+        // }
+
+        // User();
+
+        function User() {
+            this.name = "Nirav";
+
+        }
+
+        user1 = new User;
+        user2 = new User;
+
+        console.log(user1);
+        console.log(user2);
+
+//*-----------------------------------------------------*///
+        function Users(name, age) {
+            this.nm = name;
+            this.a = age;
+
+            this.fun = function test(){console.log("Hello Constructor Function...!")}
+
+        }
+
+
+        users1 = new Users("Nirav", 36,);
+        users2 = new Users("Krishiv", 9);
+
+        console.log(users1);
+        console.log(users2);
+        users1.fun();
+        users2.fun();
+
+        ///Adding prototype...
+
+        Users.prototype.havingProp = "House..!";
+
+      
+        console.log(users1.havingProp);
+        console.log(users2.havingProp);
+    
+
+
+
+     /*   Adding Properties And Methods in an Object
+You can add properties or methods in an object like this:*/
+
+// constructor function
+function Person () {
+    this.name1 = 'John',
+    this.age1 = 23
+}
+
+// creating objects
+let person1 = new Person();
+let person2 = new Person();
+
+// adding property to person1 object
+person1.gender = 'male';
+
+// adding method to person1 object
+person1.greet = function () {
+    console.log('hello');
+    console.log(this.name1);
+    
+}
+
+person1.greet();   // hello
+
+     console.log(person1.name1);
+
+//adding method to Person Constructor Function
+
+// Person.prototype.greet = function () {
+//     console.log('hello');
+//     console.log(this.name1);
+    
+// }
+// Error code==> above code will elinimate the Error Code
+// person2 doesn't have greet() method
+person2.greet();
+
+        /*
+
+        Built -in Constructors
+        JavaScript has some built -in constructors, including the following:
+
+        var a = new Object();
+
+        var b = new String();
+        var c = new String('Bob')
+
+        var d = new Number();
+        var e = new Number(25);
+
+        var f = new Boolean();
+        var g = new Boolean(true);
+        Although these constructors exist, it is recommended to use primitive data types where possible, such as:
+
+        var a = 'Bob';
+
+        var b = 25;
+
+        var c = true;
+        Strings, numbers and booleans should not be declared as objects since they hinder performance.
+*/
+
+
+
+    </script>
+</body>
+
+</html>

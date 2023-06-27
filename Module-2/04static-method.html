@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        class T
+        {
+            constructor(prop)
+            {
+                this.testProp =prop;
+                console.log("Constructor..!");
+
+            }
+
+            // test()// this will work when we call through object 
+            // {
+            //     console.log("test method1..!");
+            // }
+
+        //    static test()// this will NOT work when we call through object == this is for class itself
+        //     {
+        //         console.log("test method2..!");
+        //     }
+
+            static test(x)
+            {           
+                console.log(x.testProp);
+            }
+
+        }
+
+        t1 = new T("Property..!");
+        // t1.test();
+        // T.test();
+        T.test(t1);
+    </script>
+    
+</body>
+</html>

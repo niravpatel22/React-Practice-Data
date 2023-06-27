@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="x">
+        <p id="para">para 1</p>
+        <p>para 2</p>
+        <!-- <h1>hello</h1> -->
+    </div>
+
+
+    <script>
+
+        div = document.querySelector('.x');
+
+        p = document.getElementById('para')
+
+        h1 = document.createElement('h1');  // <h1></h1>
+        h1_txt =  document.createTextNode("This is Herading through JS...!"); //This is Herading through JS...!
+
+        h1.append(h1_txt);// <h1> This is Herading through JS...! </h1>
+
+        // div.append(h1);
+
+        // div.appendChild(h1);
+
+        div.insertBefore(h1,p);
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

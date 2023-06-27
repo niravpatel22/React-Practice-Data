@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+     class Parents{
+
+        x=12;
+        y=10;
+        constructor(baap)
+        {
+          this.baap = "HEY" 
+          console.log(this.baap);
+        }
+
+        test()
+        {
+            console.log(this.x+this.y);
+        }
+
+        static test1()
+        {
+            console.log('test1');
+        }
+     }
+
+    //  c1 = new Parents;
+    //  c1.test();
+    //  Parents.test1();
+
+
+     class Child extends Parents
+     {
+       
+        constructor()
+        { 
+            super();
+            console.log(this.baap);
+        }
+    
+        testChild()
+        {
+            
+            console.log('Child Method...!');
+        }
+
+        static testChild(getPapa)
+        {
+            console.log(getPapa);
+            console.log(getPapa.baap);
+            console.log(getPapa.x);
+            console.log(getPapa.y);
+            // console.log(Parents.prototype)
+        }
+     }
+
+
+     child1 = new Child("XYZ");
+     child1.test();
+     Child.test1();
+     Child.testChild(child1);
+
+     console.log(Parents.prototype);
+    
+      
+    </script>
+</body>
+</html>

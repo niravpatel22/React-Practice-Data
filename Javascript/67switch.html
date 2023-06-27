@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Enter your choice: <input type="text" id="inp" onkeyup="getVal()">
+
+    <h2 id="res"></h2>
+
+    <script>
+
+        input = document.getElementById('inp');
+        result = document.getElementById('res');
+
+       function getVal()
+       {
+        // choice=Number(input.value);//1
+        // choice=parseInt(input.value);//1
+        choice=parseFloat(input.value);//1
+        switch(choice)
+        {
+            case 1: result.innerHTML=("case1...!");
+            break;
+
+            case 2: result.innerHTML=("case2...!");
+            break;
+
+            case 3: result.innerHTML=("case3...!");
+            break;
+
+
+            case 4: result.innerHTML=("case4...!");
+            break;
+
+            default: result.innerHTML=("Invalid case...!");
+            
+        }
+       }
+      
+    </script>
+    
+</body>
+</html>

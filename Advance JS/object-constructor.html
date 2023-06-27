@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function Test()
+        {
+            this.nm ="hello";
+        }
+
+        const n = new Test;
+        console.log(n.nm)
+
+        class Students {
+    constructor (name, phrase) {
+        this.name = name;
+        this.phrase = phrase;
+        this.species = "HUMAN";
+    }
+    // These will be the object's methods.
+    fly = () => console.log("Yay!!")
+    sayPhrase = () => console.log(this.phrase)
+}
+
+class Bug {
+    constructor (name, phrase) {
+        this.name = name
+        this.phrase = phrase
+        this.species = "bug"
+    }
+    hide = () => console.log("You can't catch me now!")
+    sayPhrase = () => console.log(this.phrase)
+}
+
+class Robot {
+    constructor (name, phrase) {
+        this.name = name
+        this.phrase = phrase
+        this.species = "robot"
+    }
+    transform = () => console.log("Optimus prime!")
+    sayPhrase = () => console.log(this.phrase)
+}
+
+const Stud1= new Students("Ali", "I'm Ali the Al!");
+const Stud2= new Students("Krishv", "I'm Devil the Al!")
+
+console.log(Stud1);
+console.log(Stud2);
+
+
+
+const bug1 = new Bug("Buggy", "Your debugger doesn't work with me!")
+const bug2 = new Bug("Erik", "I drink decaf!")
+const Robot1 = new Robot("Tito", "I can cook, swim and dance!")
+const Robot2 = new Robot("Terminator", "Hasta la vista, baby!")
+
+console.log(bug1);
+console.log(bug2);
+console.log(Robot1);
+
+console.log(Robot2);
+    </script>
+    
+</body>
+</html>

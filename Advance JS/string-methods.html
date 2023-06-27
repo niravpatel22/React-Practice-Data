@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="h"></h1>
+
+    <script>
+        // String length
+        // String slice()
+        // String substring()
+        // String substr()
+        // String replace()
+        // String replaceAll()
+        // String toUpperCase()
+        // String toLowerCase()
+        // String concat()
+
+        str1= "      Hello !    ";
+
+        str2 ="     hi  ";
+
+        document.getElementById('h').innerHTML = str1.toUpperCase();
+        document.write(str1.toLowerCase());
+        document.getElementById('h').innerHTML = str1.concat(str1);
+
+        document.write(str1.length);
+
+        x = document.getElementById('h');
+
+        //  x1= str1.trim();
+        //  x1= str1.trimStart();
+         x1= str1.trimEnd();
+
+        document.write(x1.length);
+
+        let text = "10";
+        let padded = text.padStart(5,"h");
+
+        document.write(padded +"<br><br>");
+
+        let text1 = "5";
+        let padded1 = text1.padEnd(5,"h");
+
+        document.write(padded1);
+
+        document.write(padded +"<br><br>");
+
+        let text2 = 5;
+
+        text3 = text2.toString();
+
+        let padded2 = text3.padEnd(5,"h");
+
+        document.write(padded2);
+
+
+        let t1 = "Hello";
+        let t2 = "World";
+        let t3 = t1.concat("\"E\"", t2);
+        
+        document.write(t3 +"<br><br>");
+
+
+        document.write(t1.charAt(0) +"<br><br>");
+        document.write(t3.charAt(3) +"<br><br>");
+        document.write(t3.charCodeAt(3) +"<br><br>");
+        document.write(t3[3] +"<br><br>");//property Access
+
+
+        testStr = "Hello Dhwani ...How are you Dhwani..!!!";
+
+        document.write(testStr + "<br><br>");
+
+        document.write(testStr.indexOf("Dhwani") + "<br><br>");
+        document.write(testStr.lastIndexOf("Dhwani") + "<br><br>");
+       
+        document.write(testStr.indexOf("Dhwani",14) + "<br><br>");
+        document.write(testStr.lastIndexOf("Dhwani",34) + "<br><br>");
+
+        document.write(testStr.lastIndexOf("Dhwani",34) + "<br><br>");
+
+        document.write(testStr.lastIndexOf("Dhwani",34) + "<br><br>");
+
+        document.write(testStr.search("Dhwani") + "<br><br>");
+
+        document.write(testStr.search(/Dhwani/) + "<br><br>");
+
+        document.write(testStr.match(/dhwani/i) + "<br><br>");
+
+        document.write(testStr.match(/dhwani/ig) + "<br><br>");
+
+        // document.write(testStr.matchAll("Dhwani") + "<br><br>");
+
+
+        y = testStr.matchAll("Dhwani") ;
+
+        document.write(Array.from(y));
+
+        document.write(testStr.includes("Dhw"));
+
+        document.write(testStr.startsWith("Hello"));
+
+        document.write(testStr.endsWith("!"));
+
+        document.write(testStr.endsWith("How",19));
+
+        
+
+
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>

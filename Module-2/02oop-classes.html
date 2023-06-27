@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        const Student1 = 
+        {
+            Address:"Adress1",
+            course: 'course1',
+
+            
+        }
+
+        const Student2 = 
+        {
+            Address:"Adress2",
+            course: 'course2'
+        }
+
+
+        console.log(Student1.flying);
+
+        class Student {
+
+            constructor (adrs,sub)
+            {
+                this.adrs = adrs
+                this.sub = sub
+            }
+
+            fly = ()=>{ console.log("Student is flying...!") }
+
+            SayAdrs = ()=>{console.log(this.adrs + this.sub)}
+
+        }
+
+        student1 = new Student('Ahmedabad',"gujarati");
+
+        console.log(student1.adrs);
+        console.log(student1.sub);
+        student1.SayAdrs();
+        student1.fly();
+
+// A class can have only ONE constructor
+
+        class Parents
+        {
+            constructor (parentName,studentName)
+            {
+                this.parentName = parentName
+                this.studentName = studentName
+            }
+
+            // constructor ()
+            // {
+            //     this.fname = "Nirav",
+            //     this.lname = "Patel"
+            // }
+
+            fullname = () => {return this.studentName + this.parentName}
+        }
+
+        stu = new Parents('JB',"NJ");
+
+        console.log(stu.parentName);
+        console.log(stu.studentName)
+        console.log(stu.fullname());
+        console.log(stu.fname);
+        console.log(stu.lname);
+
+        /*
+
+        Class methods are created with the same syntax as object methods.
+
+Use the keyword class to create a class.
+
+Always add a constructor() method.
+
+Then add any number of methods. 
+
+*/
+        class Kishu 
+        {
+            name ="hello Kishu...!";
+            name= 12;
+            name =true;
+            name =34.23;
+            
+
+            constructor()
+            {
+                console.log("This is Constructor..!");
+            }
+
+           
+            
+            testK(num)//can not use Keyword function
+            {
+                console.log("TestFun...!");
+                this.num =12;
+                console.log(this.num);
+                
+               
+            }
+
+            testK1 = function t()// if want ot use function keyword use this way
+            {
+                this.x=1;
+                console.log("What to do...!" + this.x)
+            }
+
+
+        }
+
+          p1 = new Kishu;
+         console.log(p1.name);
+         p1.testK();
+         p1.testK1();
+
+//------------------------------------
+         
+        class Bank 
+        {
+            x=1;
+            y=10;
+            // atmpin = 1234;
+            bank_Details = "Bank Details..!";
+            constructor()
+            {
+                console.log("bank Example...!" + (this.x+this.y));
+            }
+
+            details(atmPin,balance,bankName,IFSC)
+            {
+                // console.log(this.bank_Details);
+                // this.atmPin = atm;
+                // this.balance = 67890;
+                // this.IFSC = "HDFC000N";
+                // this.bankName = "HDFC"
+
+
+                this.atmPin = atmPin;
+                this.balance = balance;
+                this.IFSC = IFSC;
+                this.bankName = bankName;
+                return `
+                <h1>${this.bank_Details}</h1>
+
+                <h2>Atmpin : ${this.atmPin}</h2>
+                <h2>Balance : ${this.balance}</h2>
+                <h2>IFSC  : ${this.IFSC}</h2>
+                <h2>BankName : ${this.bankName}</h2>
+
+
+                
+                
+                
+                `;
+            }
+        }
+
+
+        person1 = new Bank;
+        person2 = new Bank;
+        // person1.details();
+        document.write(person1.details(1234,34500,'HDFC000N','HDFC'));
+        document.write(person2.details(4321,134500,'AXIZ000N','AXIS'))
+         console.log(person1.x);
+         console.log(person1.y);
+
+        //  console.log(person1.atmpin);//1234
+         
+
+    </script>
+</body>
+</html>

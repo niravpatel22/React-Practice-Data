@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var promise = new Promise(function(resolve, reject) {
+        const x = "this is X";
+        const y = "this is X";
+        if(x === y) {
+            resolve();
+        } else {
+            reject();
+        }
+        });
+      
+        promise.then(function () {
+                console.log('Success, You are a Promise..!');
+            }).
+            catch(function () {
+                console.log('Some error has occurred');
+            });
+    </script>
+    
+</body>
+</html>

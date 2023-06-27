@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="test()" id="btn">Hello</button>
+
+    <script>
+
+        btn_tag = document.getElementById('btn');
+        
+        btn_tag.addEventListener("click",test)
+            function test()
+            {
+                this.innerHTML = "Button";
+            }
+
+            const Student = 
+            {
+                "Name" : "Krishiv",
+                "Age"  : 9,
+                "Std." : 3,
+                "Details" : function () {return this.Name + " " + this.Age}
+            }
+
+            btn_tag.innerHTML = Student.Details();
+
+    </script>
+    
+</body>
+</html>
